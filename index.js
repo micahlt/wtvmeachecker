@@ -24,7 +24,8 @@ var areResultsReady = false;
     } else {
       let first = await page.evaluate(() => window.find("2021"));
       let second = await page.evaluate(() => window.find("2021"));
-      if (first && second) {
+      let third = await page.evaluate(() => window.find("2021"));
+      if (first && second && third) {
         // then results are posted
         loop = false;
         areResultsReady = true;
