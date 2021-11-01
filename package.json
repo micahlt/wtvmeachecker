@@ -1,0 +1,19 @@
+{
+  "name": "wtvmea-checker",
+  "version": "1.0.0",
+  "description": "Check if WTVMEA results are out, once every 30 seconds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Micah Lindley",
+  "license": "MIT",
+  "dependencies": {
+    "@replit/audio": "^0.1.0",
+    "audic": "^3.0.0",
+    "audio-loader": "^1.0.3",
+    "audio-play": "^2.3.1",
+    "play-sound": "^1.1.3",
+    "puppeteer": "^10.4.0"
+  }
+}
