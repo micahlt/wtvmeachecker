@@ -112,7 +112,8 @@
         if (data) {
           document.querySelector('#status').innerHTML = `Results are ready 🎉`;
 					document.querySelector("#descriptor").innerHTML = `<a href="https://wtvmea.org/results" target="_blank">go to WTVMEA!</a>`
-          var notification = new Notification("Results are out!");
+          var notification = new Notification("Results are out!", { body: "Click to go to WTVMEA now!", requireInteraction: true });
+					notification.onclick = window.open('https://wtvmea.org/results');
           document.querySelector('.incomplete').classList.add('complete');
           document.querySelector('.incomplete').classList.remove('incomplete');
         } else {
