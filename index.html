@@ -17,7 +17,7 @@
 			height: 100vh;
 		}
 
-		body>div {
+		body>div:first-of-type {
 			display: flex;
 			height: 100%;
 			justify-content: center;
@@ -46,9 +46,21 @@
       transition: 0.2s;
 		}
 
-		a {
-
+		#status a {
 			color: black;
+		}
+
+		.bottom {
+			position: fixed;
+			bottom: 10px;
+			color: white;
+			opacity: 0.65;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.bottom a {
+			color: white;
 		}
 
 		.lds-ripple {
@@ -93,10 +105,13 @@
 <body class="incomplete">
 	<div>
 		<div>
-			<h1 id="status">loading...</h1>
+			<h1 id="status">Still waiting 😮</h1>
 			<p id="descriptor">this refreshes every 20 seconds</p>
 		</div>
     <div class="lds-ripple"><div></div><div></div></div>
+	</div>
+	<div class="bottom">
+		a project by <a href="https://micahlindley.com" target="_blank">Micah Lindley</a>
 	</div>
 	<script>
     Notification.requestPermission();
