@@ -47,7 +47,7 @@
 		}
 
 		a {
-			text-decoration: none;
+
 			color: black;
 		}
 
@@ -94,7 +94,7 @@
 	<div>
 		<div>
 			<h1 id="status">loading...</h1>
-			<p>this refreshes every five seconds</p>
+			<p id="descriptor">this refreshes every five seconds</p>
 		</div>
     <div class="lds-ripple"><div></div><div></div></div>
 	</div>
@@ -110,7 +110,8 @@
       .then((data) => {
         data = JSON.parse(data);
         if (data) {
-          document.querySelector('#status').innerHTML = `<a href="https://wtvmea.org/results" target="_blank">Results are ready 🎉</a>`;
+          document.querySelector('#status').innerHTML = `Results are ready 🎉`;
+					document.querySelector("#descriptor").innerHTML = `<a href="https://wtvmea.org/results" target="_blank">go to WTVMEA!</a>`
           var notification = new Notification("Results are out!");
           document.querySelector('.incomplete').classList.add('complete');
           document.querySelector('.incomplete').classList.remove('incomplete');
